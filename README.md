@@ -1,3 +1,6 @@
+Esse repositório contém dados e textos gerados por IA, afim de facilitar e agilizar o desenvolvimento, que deveria ser rápido.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
