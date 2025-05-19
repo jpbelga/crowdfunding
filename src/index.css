@@ -1,13 +1,57 @@
+/* Diretivas do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globais personalizados */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Cor de fundo geral (usando gray-custom-50) */
+  color: #343a40; /* Cor de texto padrão (usando gray-custom-800) */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilos para a barra de rolagem (opcional, mas melhora a estética) */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  height: 8px; /* Altura para barras horizontais */
+}
+::-webkit-scrollbar-track {
+  background: #e9ecef; /* Cor do trilho (usando gray-custom-200) */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #adb5bd; /* Cor do polegar (usando gray-custom-500) */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #868e96; /* Cor do polegar ao passar o mouse (usando gray-custom-600) */
+}
+
+/* Estilos para inputs e botões com foco, para melhor acessibilidade e feedback visual */
+@layer base {
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full rounded-md border-gray-custom-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50;
+  }
+  button, [type='button'], [type='reset'], [type='submit'] {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary;
+  }
 }
